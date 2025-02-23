@@ -2,7 +2,7 @@
   "name": "cafeteria-website",
   "private": true,
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_ENV=production rspack build",

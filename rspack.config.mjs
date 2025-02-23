@@ -1,8 +1,8 @@
 import { defineConfig } from '@rspack/cli';
 import { rspack } from '@rspack/core';
 import * as sassEmbedded from 'sass-embedded';
-import { fileURLToPath } from 'url';
-import path from 'path';
+import { fileURLToPath } from 'node:url';
+import { resolve, dirname } from 'node:path';
 // Target browsers, see: https://github.com/browserslist/browserslist
 const targets = ['chrome >= 87', 'edge >= 88', 'firefox >= 78', 'safari >= 14'];
 
@@ -11,7 +11,7 @@ export default defineConfig({
     main: './src/index.js',
   },
   output: {
-    path: path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'dist'),
+    path: resolve(dirname(fileURLToPath(import.meta.url)), 'dist'),
     filename: 'bundle.js',
     clean: true,
   },
