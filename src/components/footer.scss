@@ -1,0 +1,21 @@
+@use '../scss/position';
+
+.footer {
+  @include position.center-flex;
+  //width: 100%;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+
+  p {
+    @include position.center-flex(column);
+    text-align: center;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
+}
