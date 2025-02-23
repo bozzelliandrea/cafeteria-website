@@ -1,6 +1,8 @@
 import { defineConfig } from '@rspack/cli';
 import { rspack } from '@rspack/core';
 import * as sassEmbedded from 'sass-embedded';
+import { fileURLToPath } from 'url';
+import path from 'path';
 // Target browsers, see: https://github.com/browserslist/browserslist
 const targets = ['chrome >= 87', 'edge >= 88', 'firefox >= 78', 'safari >= 14'];
 
@@ -8,11 +10,16 @@ export default defineConfig({
   entry: {
     main: './src/index.js',
   },
+  output: {
+    path: path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'dist'),
+    filename: 'bundle.js',
+    clean: true,
+  },
   module: {
     rules: [
       {
-        test: /\.svg$/,
-        type: 'asset',
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource', // This will handle image files
       },
       {
         test: /\.js$/,

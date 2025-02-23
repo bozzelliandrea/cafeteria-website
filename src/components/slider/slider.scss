@@ -1,0 +1,66 @@
+/*
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+
+  .slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+
+    img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+    }
+  }
+}
+*/
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-images {
+  display: flex;
+  animation: slide 20s infinite; /* 20s duration for 4 images */
+}
+
+.carousel-images img {
+  width: 100%;
+  min-width: 100%;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  } /* Show first image */
+  25% {
+    transform: translateX(-100%);
+  } /* Transition to second image */
+  45% {
+    transform: translateX(-100%);
+  } /* Show second image */
+  50% {
+    transform: translateX(-200%);
+  } /* Transition to third image */
+  70% {
+    transform: translateX(-200%);
+  } /* Show third image */
+  75% {
+    transform: translateX(-300%);
+  } /* Transition to fourth image */
+  95% {
+    transform: translateX(-300%);
+  } /* Show fourth image */
+  100% {
+    transform: translateX(0);
+  } /* Return to first image */
+}
