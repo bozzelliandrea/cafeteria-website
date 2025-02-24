@@ -8,7 +8,9 @@ const targets = ['chrome >= 87', 'edge >= 88', 'firefox >= 78', 'safari >= 14'];
 
 export default defineConfig({
   entry: {
-    main: './src/index.js',
+    main: {
+      import: './src/index.js',
+    },
   },
   output: {
     path: resolve(dirname(fileURLToPath(import.meta.url)), 'dist'),

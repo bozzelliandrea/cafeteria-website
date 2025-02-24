@@ -1,20 +1,17 @@
-// barrel index
 import './index.scss';
 
-// shared components
-import './components/footer/footer.js';
-import './components/slider/slider.js';
-
-// page sections
+import sliderSection from './components/slider/slider.js';
+import footerSection from './components/footer/footer.js';
 import contactSection from './sections/contact.js';
 import menuSection from './sections/menu.js';
+import reviewsSection from './sections/reviews.js';
 
 document.getElementById('root').innerHTML = `
-<div class="content">
-	<div id="top_slider"></div>
-  ${menuSection}
-  ${contactSection}
-  <footer id="main_footer"></footer>
-
-</div>
+  <div class="content">
+    ${sliderSection}
+    ${menuSection}
+    ${contactSection}
+    ${reviewsSection}
+    ${footerSection}
+  </div>
 `;

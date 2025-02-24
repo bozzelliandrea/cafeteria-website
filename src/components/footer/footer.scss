@@ -1,6 +1,6 @@
 @use '../../scss/position';
 
-.footer {
+footer {
   @include position.center-flex;
   //width: 100%;
   padding: 20px;
