@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 300px;
+}
+.left {
+  width: 50%;
+  background-color: green;
+  height: 100%;
+}
+.right {
+  width: 45%;
+}
+.right h2 {
+  margin-top: 0;
+}
+.right p {
+  margin: 5px 0;
+}

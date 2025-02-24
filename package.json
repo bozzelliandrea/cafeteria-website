@@ -3,6 +3,11 @@
   "private": true,
   "version": "1.0.0",
   "main": "src/index.js",
+  "homepage": "https://bozzelliandrea.github.io/cafeteria-website/",
+  "author": {
+    "name": "bozzelliandrea",
+    "url": "https://github.com/bozzelliandrea"
+  },
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_ENV=production rspack build",
