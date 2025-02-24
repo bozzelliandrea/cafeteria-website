@@ -31,7 +31,6 @@ function showSlide() {
   `;
 
   const slides = document.querySelector('.slides');
-  slides.style.transform = `translateX(-${index * 100}%)`;
 }
 
 document.addEventListener('DOMContentLoaded', showSlide);
