@@ -4,6 +4,12 @@
   align-items: center;
   padding: 20px;
   height: 300px;
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.5;
+  }
 }
 .left {
   width: 50%;

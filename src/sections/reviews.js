@@ -13,6 +13,30 @@ const template = `
                     accumsan maximus leo. Vivamus eu odio leo. Phasellus feugiat cursus ultrices.</p>
                 <p class="review-user">Martha Stewart</p>
             </div>
+            <div class="review">
+                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus erat
+                    fringilla ante dapibus lacinia. Morbi commodo maximus. Maecenas risus ligula, porta non eros at,
+                    accumsan maximus leo. Vivamus eu odio leo. Phasellus feugiat cursus ultrices.</p>
+                <p class="review-user">Martha Stewart</p>
+            </div>
+            <div class="review">
+                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus erat
+                    fringilla ante dapibus lacinia. Morbi commodo maximus. Maecenas risus ligula, porta non eros at,
+                    accumsan maximus leo. Vivamus eu odio leo. Phasellus feugiat cursus ultrices.</p>
+                <p class="review-user">Martha Stewart</p>
+            </div>
+            <div class="review">
+                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus erat
+                    fringilla ante dapibus lacinia. Morbi commodo maximus. Maecenas risus ligula, porta non eros at,
+                    accumsan maximus leo. Vivamus eu odio leo. Phasellus feugiat cursus ultrices.</p>
+                <p class="review-user">Martha Stewart</p>
+            </div>
+            <div class="review">
+                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus erat
+                    fringilla ante dapibus lacinia. Morbi commodo maximus. Maecenas risus ligula, porta non eros at,
+                    accumsan maximus leo. Vivamus eu odio leo. Phasellus feugiat cursus ultrices.</p>
+                <p class="review-user">Martha Stewart</p>
+            </div>
         </div>
     </section>
 `;

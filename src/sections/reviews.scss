@@ -1,0 +1,44 @@
+@use '../scss/position';
+
+.text {
+  width: 100%;
+  @include position.center-flex(column);
+  text-transform: uppercase;
+
+  p {
+    margin-top: 0;
+    text-transform: lowercase;
+    font-size: 1.2rem;
+    opacity: 0.5;
+  }
+}
+
+.review-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 20px;
+  height: 300px;
+
+  .review {
+    background: #c49b63;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 1;
+
+    &:hover {
+      height: 110%;
+      border: 1px solid white;
+      background: #a67408;
+      margin-top: -10px;
+    }
+  }
+}

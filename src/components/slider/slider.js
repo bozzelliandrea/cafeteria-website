@@ -15,7 +15,7 @@ const template = `
         <div class="overlay">
           <div class="overlay-content">
             <h1>MAIN TITLE TO SET</h1>
-            <h4>Commercial lorem ipsum beta alpa</h4>
+            <p>Commercial lorem ipsum beta alpa</p>
             <div class="button-container">
                 <a class="btn">Order Now</a>
                 <a class="btn">View Menu</a>
