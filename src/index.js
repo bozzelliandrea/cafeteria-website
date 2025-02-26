@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return Promise.all([
         import('./sections/menu.js'),
         import('./sections/contact.js'),
+        import('./sections/booking.js'),
         import('./sections/reviews.js'),
         import('./components/footer/footer.js'),
       ]);
