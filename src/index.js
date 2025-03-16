@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // load the rest of the sections
       return Promise.all([
-        import('./sections/menu.js'),
-        import('./sections/contact.js'),
-        import('./sections/booking.js'),
-        import('./sections/reviews.js'),
+        import('./sections/menu/menu.js'),
+        import('./sections/contact/contact.js'),
+        import('./sections/booking/booking.js'),
+        import('./sections/reviews/reviews.js'),
         import('./components/footer/footer.js'),
       ]);
     })
