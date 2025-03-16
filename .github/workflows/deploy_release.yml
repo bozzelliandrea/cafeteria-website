@@ -1,5 +1,11 @@
 name: Trigger Release and Publish Page Workflow
 
+permissions:
+  contents: read
+  issues: read
+  pages: read
+  id-token: write
+
 # Trigger on Main branch
 on:
   push:
