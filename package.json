@@ -1,7 +1,7 @@
 {
   "name": "cafeteria-website",
-  "private": true,
-  "version": "1.0.0",
+  "private": false,
+  "version": "0.0.1-beta.1",
   "main": "src/index.js",
   "homepage": "https://bozzelliandrea.github.io/cafeteria-website/",
   "author": {
