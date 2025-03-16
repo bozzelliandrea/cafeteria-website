@@ -1,14 +1,25 @@
+h1#book_title {
+  text-transform: capitalize;
+  border-bottom: 1px solid rgb(215, 180, 23);
+  margin: 20px;
+  text-align: left;
+}
+
 .booking-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.booking-left_image {
+  width: 48%;
+}
+
 .booking-form {
   background: #000000;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  width: 48%;
 }
 form {
   display: flex;
@@ -60,15 +71,22 @@ form {
     height: 100px;
   }
 }
+
 button {
-  padding: 10px;
-  background: #007bff;
-  color: #fff;
+  background-color: #262523;
+  color: white;
   border: none;
-  border-radius: 5px;
+  padding: 20px;
+  text-decoration: none;
   cursor: pointer;
-  height: 50px;
+  transition: background-color 0.3s;
 }
+
+button:hover {
+  color: black;
+  background-color: #c49b63;
+}
+
 @media (max-width: 600px) {
   .form-row {
     flex-direction: column;

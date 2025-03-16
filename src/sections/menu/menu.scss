@@ -38,6 +38,12 @@
   @media (max-width: 768px) {
     width: 100%; /* Make each rectangle take the full width */
   }
+
+  h1 {
+    text-transform: uppercase;
+    width: 100%;
+    border-bottom: 1px solid rgb(215, 180, 23);
+  }
 }
 
 /* Just to make sure the elements are visible */
