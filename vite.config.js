@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => {
     server: {
       port: Number(env.FRONTEND_PORT),
     },
+    base: '/cafeteria-website/',
     root: 'src',
     envDir: '../',
     build: {
