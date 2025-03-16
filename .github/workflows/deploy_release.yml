@@ -2,9 +2,9 @@ name: Trigger Release and Publish Page Workflow
 
 permissions:
   contents: read
-  issues: read
-  pages: read
-  id-token: write
+  issues: write
+  pull-requests: write
+  workflows: write
 
 # Trigger on Main branch
 on:
@@ -17,6 +17,9 @@ jobs:
     # Only runs if commit message starts with "release"
     if: startsWith(github.event.head_commit.message, 'release')
     runs-on: ubuntu-latest
+    permissions:
+      workflows: write
+      contents: read
 
     steps:
       - name: Checkout repository
@@ -28,8 +31,14 @@ jobs:
 
       - name: Trigger GitHub Pages Workflow
         run: |
-          curl -X POST \
+          http_response=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             -d '{"ref": "main"}' \
-            https://api.github.com/repos/${{ github.repository }}/actions/workflows/github_pages.yaml/dispatches
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/other-workflow.yml/dispatches)
+
+          # Check if the response code is 200 or 204
+          if [[ "$http_response" -ne 200 && "$http_response" -ne 204 ]]; then
+            echo "Curl command failed with HTTP response code $http_response."
+            exit 1  # Fail the workflow if the response is not 200
+          fi
