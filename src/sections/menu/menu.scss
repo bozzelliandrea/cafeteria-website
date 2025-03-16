@@ -18,11 +18,12 @@
   background-color: black;
   height: 500px;
   display: flex;
+  gap: 10px; // distance between flex child items
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 10px;
-  border: 1px solid;
+  // border: 1px solid; debug
 
   /* Title inside each rectangle */
   .title {
@@ -36,5 +37,59 @@
   /* For mobile devices */
   @media (max-width: 768px) {
     width: 100%; /* Make each rectangle take the full width */
+  }
+}
+
+/* Just to make sure the elements are visible */
+.menu-item_container {
+  border: 1px solid black;
+  width: 100%;
+  // background-color: lightgray; visible for debug
+  display: flex;
+}
+
+.menu-item_icon-container {
+  width: 15%;
+  align-content: center;
+  justify-content: center;
+}
+
+.menu-item_icon {
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 1%;
+  width: 80px;
+  height: 80px;
+  background-color: gray; /* Just to make sure the image div is visible */
+}
+
+.menu-item_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+
+  .menu-item_content-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h3 {
+      text-transform: uppercase;
+      border-bottom: 1px solid rgb(215, 180, 23);
+    }
+
+    .price {
+      color: rgb(215, 180, 23);
+      font-size: 20px;
+      font-weight: bold;
+      margin: 1%;
+    }
+  }
+
+  .menu-item_content-description {
+    p {
+      margin-top: 0;
+    }
   }
 }

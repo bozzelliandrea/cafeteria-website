@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.content').innerHTML += sections
         .map((s) => s.default)
         .join('');
+      document.dispatchEvent(new Event('WebAppInvoker_ContentLoading'));
     })
     .catch((error) => {
       console.error('Error loading sections:', error);
