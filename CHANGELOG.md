@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.0-beta.2](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.1.0-beta.1...cafeteria-website-v0.1.0-beta.2) (2025-03-17)
+
+
+### Features
+
+* contact sections ([4790569](https://github.com/bozzelliandrea/cafeteria-website/commit/47905692456a08a987cbd5d22f9054fbd8bfaf77))
+* menu component with items ([06323de](https://github.com/bozzelliandrea/cafeteria-website/commit/06323de577fdd58392c54ba863a2d7c5258b88f2))
+* migrate from rspack to vite bundler ([183412c](https://github.com/bozzelliandrea/cafeteria-website/commit/183412c18b186af177101c6d23099eef368b20c8))
+
+
+### Bug Fixes
+
+* vite prod base url ([f92f449](https://github.com/bozzelliandrea/cafeteria-website/commit/f92f449be7138f9405ec6232b66bb501bfdc6ae2))
+
 ## [0.1.0-beta.1](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.0.1-beta.1...cafeteria-website-v0.1.0-beta.1) (2025-03-16)
 
 ### Features
