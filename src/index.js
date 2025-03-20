@@ -3,12 +3,12 @@ import './index.scss';
 document.addEventListener('DOMContentLoaded', () => {
   // render slider first
   import('./components/slider/slider.js')
-    .then((sliderModule) => {
-      const sliderSection = sliderModule.default;
-
+    .then(async (sliderModule) => {
+      const navbar = await import('./components/navbar/navbar.js');
       document.getElementById('root').innerHTML = `
       <div class="content">
-        ${sliderSection}
+        ${navbar.default}
+        ${sliderModule.default}
       </div>
     `;
 

@@ -5,7 +5,7 @@ import cafeteria3 from '../../../assets/cafeteria3.jpg';
 import cafeteria4 from '../../../assets/cafeteria4.jpg';
 
 const template = `
-    <div class="carousel">
+    <div class="carousel" id="slider">
         <div class="carousel-images">
             <img src="${cafeteria1}" draggable="false" alt="cafeteria background image 1">
             <img src="${cafeteria2}" draggable="false" alt="cafeteria background image 2">
