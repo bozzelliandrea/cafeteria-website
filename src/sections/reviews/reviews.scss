@@ -16,16 +16,16 @@
 .review-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  align-items: end;
   padding: 20px;
-  height: 300px;
+  height: 350px;
 
   .review {
     background: #c49b63;
     padding: 20px;
     color: white;
     text-align: center;
-    transition: all 0.5s ease-in-out;
+
     height: 100%;
     display: flex;
     align-items: center;
@@ -33,12 +33,32 @@
     flex-direction: column;
     overflow: hidden;
     opacity: 1;
+  }
 
-    &:hover {
-      height: 110%;
-      border: 1px solid white;
-      background: #a67408;
-      margin-top: -10px;
-    }
+  .overlay {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    height: 90%;
+  }
+  .overlay::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: #000;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  .primary {
+    height: 80%;
+  }
+
+  .secondary {
+    background: #a67408;
+    height: 100%;
   }
 }
