@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0-beta.3](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.1.0-beta.2...cafeteria-website-v0.1.0-beta.3) (2025-03-20)
+
+
+### Features
+
+* navigation bar component ([1214a8e](https://github.com/bozzelliandrea/cafeteria-website/commit/1214a8ebe8f03a323d84da4de43683833c5c2a9d))
+* review component style ([577ba78](https://github.com/bozzelliandrea/cafeteria-website/commit/577ba78a3921092e0325d72a2960194140c540e4))
+
 ## [0.1.0-beta.2](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.1.0-beta.1...cafeteria-website-v0.1.0-beta.2) (2025-03-17)
 
 
