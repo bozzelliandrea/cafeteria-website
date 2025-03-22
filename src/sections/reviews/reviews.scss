@@ -11,6 +11,7 @@
     font-size: 1.2rem;
     opacity: 0.5;
     font-family: 'Dancing Script', cursive;
+    text-align: center;
   }
 }
 
@@ -20,6 +21,13 @@
   align-items: end;
   padding: 20px;
   height: 350px;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
 
   .review {
     background: #c49b63;
@@ -34,10 +42,24 @@
     flex-direction: column;
     overflow: hidden;
     opacity: 1;
+
+    @media (max-width: 900px) {
+      min-width: 100%;
+    }
+  }
+
+  .review-text {
+    @media (max-width: 900px) {
+      padding: 20px;
+    }
   }
 
   .review-user {
     font-family: 'Dancing Script', cursive;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
   }
 
   .overlay {
