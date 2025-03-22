@@ -13,7 +13,15 @@ document.addEventListener('WebAppInvoker_ContentLoading', () => {
 
   const navbar = document.getElementById('navbar');
   const slider = document.getElementById('slider');
+  const navLinks = document.querySelectorAll('#navbar .nav-link');
+  const sections = [
+    slider,
+    document.getElementById('menu-section'),
+    document.getElementById('contact-section'),
+    document.getElementById('reviews-section'),
+  ];
 
+  // Navbar change active handler
   window.addEventListener('scroll', () => {
     // Get the position of the slider relative to the top of the page
     const sliderPosition = slider.offsetTop + slider.offsetHeight;
@@ -24,6 +32,21 @@ document.addEventListener('WebAppInvoker_ContentLoading', () => {
     } else {
       navbar.classList.remove('scrolled');
     }
+
+    // Get the center of the viewport
+    const viewportCenter = window.scrollY + window.innerHeight / 2;
+
+    // Check which section is in the viewport
+    sections.forEach((section, index) => {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
+
+      // Check if the center of the screen is within the section's bounds
+      if (viewportCenter >= sectionTop && viewportCenter < sectionBottom) {
+        navLinks.forEach((link) => link.classList.remove('active'));
+        navLinks[index].classList.add('active');
+      }
+    });
   });
 
   window.addEventListener('hashchange', () => {
