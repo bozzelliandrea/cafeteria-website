@@ -9,12 +9,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 600px) {
+    margin-top: 50px;
+  }
+
+  @media (max-width: 400px) {
+    margin-top: 100px;
+  }
 }
 
 .image-container {
   position: relative;
   display: inline-block;
   width: 48%;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 }
 
 .booking-left_image {
@@ -51,6 +63,10 @@
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 48%;
+
+  @media (max-width: 900px) {
+    width: 90%;
+  }
 }
 form {
   display: flex;
