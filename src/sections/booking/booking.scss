@@ -1,4 +1,4 @@
-h1#book_title {
+.book_title {
   text-transform: capitalize;
   border-bottom: 1px solid rgb(215, 180, 23);
   margin: 20px;
@@ -11,8 +11,39 @@ h1#book_title {
   align-items: center;
 }
 
-.booking-left_image {
+.image-container {
+  position: relative;
+  display: inline-block;
   width: 48%;
+}
+
+.booking-left_image {
+  width: 100%;
+}
+
+#booking-left_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+  z-index: 1; /* Ensure it's above the image */
+
+  p {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 25%;
+    font-size: 35px;
+  }
+
+  .no-margin {
+    margin-top: 0%;
+  }
+
+  .styled {
+    color: rgb(215, 180, 23);
+  }
 }
 
 .booking-form {

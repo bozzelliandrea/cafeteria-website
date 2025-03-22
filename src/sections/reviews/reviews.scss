@@ -7,9 +7,10 @@
 
   p {
     margin-top: 0;
-    text-transform: lowercase;
+    text-transform: capitalize;
     font-size: 1.2rem;
     opacity: 0.5;
+    font-family: 'Dancing Script', cursive;
   }
 }
 
@@ -33,6 +34,10 @@
     flex-direction: column;
     overflow: hidden;
     opacity: 1;
+  }
+
+  .review-user {
+    font-family: 'Dancing Script', cursive;
   }
 
   .overlay {
