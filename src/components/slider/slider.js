@@ -4,6 +4,22 @@ import cafeteria2 from '../../../assets/cafeteria2.jpg';
 import cafeteria3 from '../../../assets/cafeteria3.jpg';
 import cafeteria4 from '../../../assets/cafeteria4.jpg';
 
+document.addEventListener('WebAppInvoker_ContentLoading', () => {
+  document.getElementById('slider-view-menu-button').onclick = () => {
+    window.location.hash = '#menu-section';
+    document
+      .getElementById('menu-section')
+      .scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  document.getElementById('slider-book-table-button').onclick = () => {
+    window.location.hash = '#contact';
+    document
+      .getElementById('contact-section')
+      .scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+});
+
 const template = `
     <div class="carousel" id="slider">
         <div class="carousel-images">
@@ -14,11 +30,11 @@ const template = `
         </div>
         <div class="overlay">
           <div class="overlay-content">
-            <h1>MAIN TITLE TO SET</h1>
-            <p>Commercial lorem ipsum beta alpa</p>
+            <h1>kauai coffee</h1>
+            <p>One of the Best coffee taste and Experience in Town</p>
             <div class="button-container">
-                <a class="btn">Order Now</a>
-                <a class="btn">View Menu</a>
+                <a id="slider-view-menu-button" class="btn">View Menu</a>
+                <a id="slider-book-table-button" class="btn">Book a Table</a>
             </div>
           </div>
         </div>

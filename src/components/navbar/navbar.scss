@@ -6,9 +6,14 @@
   width: 100%;
   border-bottom: 1px solid rgb(215, 180, 23);
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   #logo {
-    height: 10vh;
-    padding-left: 10vw;
+    height: 6vh;
+    padding-left: 5vw;
+    cursor: pointer;
   }
 }
 
@@ -21,7 +26,7 @@
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 5vh 40px 5vh 40px;
+  padding: 3vh 40px 3vh 40px;
   text-decoration: none;
   font-size: 17px;
   text-transform: uppercase;

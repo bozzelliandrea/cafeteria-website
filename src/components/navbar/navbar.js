@@ -3,13 +3,10 @@ import logo from '../../../assets/logo.png';
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 document.addEventListener('WebAppInvoker_ContentLoading', () => {
-  document.getElementById('sandwich').onclick = () => {
-    var x = document.getElementById('navbar');
-    if (x.className === 'topnav') {
-      x.classList.add('responsive');
-    } else {
-      x.className = 'topnav';
-    }
+  document.getElementById('logo').onclick = () => {
+    window.location.hash = '#slider';
+    const slider = document.getElementById('slider');
+    slider.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const navbar = document.getElementById('navbar');
@@ -73,13 +70,12 @@ document.addEventListener('WebAppInvoker_ContentLoading', () => {
 const template = `
     <div class="topnav" id="navbar">
         <img id="logo" src="${logo}" draggable="false" alt="cafeteria background image 1">
-        <a class="nav-link active" href="#slider">Home</a>
-        <a class="nav-link" href="#menu-section">Menu</a>
-        <a class="nav-link" href="#contact">Contact</a>
-        <a class="nav-link" href="#reviews-section">Reviews</a>
-        <a href="javascript:void(0);" class="icon" id="sandwich">
-            <i class="fa fa-bars"></i>
-        </a>
+        <div>
+          <a class="nav-link active" href="#slider">Home</a>
+          <a class="nav-link" href="#menu-section">Menu</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="#reviews-section">Reviews</a>
+        </div>
     </div>
 `;
 
