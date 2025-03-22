@@ -69,7 +69,7 @@ document.addEventListener('WebAppInvoker_ContentLoading', () => {
 
 const template = `
     <div class="topnav" id="navbar">
-        <img id="logo" src="${logo}" draggable="false" alt="cafeteria background image 1">
+        <img id="logo" src="${logo}" draggable="false" alt="cafeteria logo">
         <div>
           <a class="nav-link active" href="#slider">Home</a>
           <a class="nav-link" href="#menu-section">Menu</a>
