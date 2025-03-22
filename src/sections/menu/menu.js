@@ -1,15 +1,27 @@
 import './menu.scss';
 import template from './menu.html?raw';
+import dessert1 from '../../../assets/food/dessert-1.jpg.webp';
+import dessert2 from '../../../assets/food/dessert-2.jpg.webp';
+import dessert4 from '../../../assets/food/dessert-4.jpg.webp';
+import dish3 from '../../../assets/food/dish-3.jpg.webp';
+import dish4 from '../../../assets/food/dish-4.jpg.webp';
+import dish5 from '../../../assets/food/dish-5.jpg.webp';
+import dish6 from '../../../assets/food/dish-6.jpg.webp';
+import dish7 from '../../../assets/food/dish-7.jpg.webp';
+import dish8 from '../../../assets/food/dish-8.jpg.webp';
+import drink5 from '../../../assets/food/drink-5.jpg.webp';
+import drink6 from '../../../assets/food/drink-6.jpg.webp';
+import drink7 from '../../../assets/food/drink-7.jpg.webp';
+import drink8 from '../../../assets/food/drink-8.jpg.webp';
 
-function createMenuItem({ name, description, price }) {
+function createMenuItem({ name, description, price, image }) {
   // Create the outer div
   const pricingEntry = document.createElement('div');
   pricingEntry.classList.add('menu-item_container');
-
   // Create the image div
-  const imgDiv = document.createElement('div');
+  const imgDiv = document.createElement('img');
   imgDiv.classList.add('menu-item_icon');
-  imgDiv.style.backgroundImage = 'url(images/dish-1.jpg)';
+  imgDiv.src = image;
 
   const imgContainerDiv = document.createElement('div');
   imgContainerDiv.classList.add('menu-item_icon-container');
@@ -56,93 +68,109 @@ function createMenuItem({ name, description, price }) {
 
 const STARTER_LIST = [
   {
-    name: 'Starter Dish One',
-    description: 'A description of this amazing dish.',
+    name: 'Bruschetta',
+    description: 'Toasted bread with tomatoes and basil.',
     price: '6.50',
+    image: dish3, // You can randomly assign image imports like dish3, dessert1, etc.
   },
   {
-    name: 'Starter Dish Two',
-    description: 'A description of this amazing dish.',
+    name: 'Stuffed Mushrooms',
+    description: 'Mushrooms filled with cheese and herbs.',
     price: '12.00',
+    image: dish4,
   },
   {
-    name: 'Starter Dish Three',
-    description: 'A description of this amazing dish.',
+    name: 'Caesar Salad',
+    description: 'Crisp lettuce with Caesar dressing.',
     price: '8.40',
+    image: dessert2,
   },
   {
-    name: 'Starter Dish Four',
-    description: 'A description of this amazing dish.',
+    name: 'Garlic Bread',
+    description: 'Buttery, garlicky toasted bread.',
     price: '7.00',
+    image: dish6,
   },
 ];
 
 const MAIN_LIST = [
   {
-    name: 'Main Dish One',
-    description: 'A description of this amazing dish.',
-    price: '6.50',
+    name: 'Grilled Chicken Breast',
+    description: 'Served with steamed vegetables.',
+    price: '16.50',
+    image: dish7,
   },
   {
-    name: 'Main Dish Two',
-    description: 'A description of this amazing dish.',
-    price: '12.00',
+    name: 'Beef Wellington',
+    description: 'Tender beef wrapped in puff pastry.',
+    price: '22.00',
+    image: dish5,
   },
   {
-    name: 'Main Dish Three',
-    description: 'A description of this amazing dish.',
-    price: '8.40',
+    name: 'Spaghetti Carbonara',
+    description: 'Pasta with creamy bacon sauce.',
+    price: '12.40',
+    image: dish8,
   },
   {
-    name: 'Main Dish Four',
-    description: 'A description of this amazing dish.',
-    price: '7.00',
+    name: 'Vegetable Stir Fry',
+    description: 'A medley of stir-fried veggies.',
+    price: '14.00',
+    image: dessert4,
   },
 ];
 
 const DESSERT_LIST = [
   {
-    name: 'Dessert One',
-    description: 'A description of this amazing dish.',
+    name: 'Chocolate Lava Cake',
+    description: 'Warm cake with molten chocolate center.',
     price: '5.50',
+    image: dessert1,
   },
   {
-    name: 'Dessert Two',
-    description: 'A description of this amazing dish.',
+    name: 'Tiramisu',
+    description: 'Coffee-flavored Italian dessert.',
     price: '6.00',
+    image: dish4,
   },
   {
-    name: 'Dessert Three',
-    description: 'A description of this amazing dish.',
+    name: 'Lemon Sorbet',
+    description: 'Refreshing citrus frozen dessert.',
     price: '4.50',
+    image: dish6,
   },
   {
-    name: 'Dessert Four',
-    description: 'A description of this amazing dish.',
+    name: 'Vanilla Panna Cotta',
+    description: 'Creamy custard with fruit topping.',
     price: '3.50',
+    image: drink5,
   },
 ];
 
 const DRINKS_LIST = [
   {
-    name: 'Drink One',
-    description: 'A description of this amazing dish.',
+    name: 'Lemonade',
+    description: 'Freshly squeezed lemon juice.',
     price: '4.50',
+    image: drink6,
   },
   {
-    name: 'Drink Two',
-    description: 'A description of this amazing dish.',
+    name: 'Iced Coffee',
+    description: 'Chilled coffee with ice cubes.',
     price: '5.50',
+    image: drink7,
   },
   {
-    name: 'Drink Three',
-    description: 'A description of this amazing dish.',
+    name: 'Coca Cola',
+    description: 'Classic carbonated soft drink.',
     price: '4.50',
+    image: drink8,
   },
   {
-    name: 'Drink Four',
-    description: 'A description of this amazing dish.',
+    name: 'Sparkling Water',
+    description: 'Refreshing fizzy mineral water.',
     price: '3.00',
+    image: dish3,
   },
 ];
 
