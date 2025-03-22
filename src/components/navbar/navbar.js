@@ -1,4 +1,5 @@
 import './navbar.scss';
+import logo from '../../../assets/logo.png';
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 document.addEventListener('WebAppInvoker_ContentLoading', () => {
@@ -25,16 +26,16 @@ document.addEventListener('WebAppInvoker_ContentLoading', () => {
   window.addEventListener('scroll', () => {
     // Get the position of the slider relative to the top of the page
     const sliderPosition = slider.offsetTop + slider.offsetHeight;
+    const viewportCenter = window.scrollY + window.innerHeight / 2;
 
     // If the page has been scrolled past the slider, add the 'scrolled' class to the navbar
-    if (window.scrollY > sliderPosition) {
+    if (viewportCenter > sliderPosition) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
 
     // Get the center of the viewport
-    const viewportCenter = window.scrollY + window.innerHeight / 2;
 
     // Check which section is in the viewport
     sections.forEach((section, index) => {
@@ -71,6 +72,7 @@ document.addEventListener('WebAppInvoker_ContentLoading', () => {
 
 const template = `
     <div class="topnav" id="navbar">
+        <img id="logo" src="${logo}" draggable="false" alt="cafeteria background image 1">
         <a class="nav-link active" href="#slider">Home</a>
         <a class="nav-link" href="#menu-section">Menu</a>
         <a class="nav-link" href="#contact">Contact</a>
