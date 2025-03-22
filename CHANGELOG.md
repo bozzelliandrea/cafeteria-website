@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.1.0-beta.4](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.1.0-beta.3...cafeteria-website-v0.1.0-beta.4) (2025-03-22)
+
+
+### Features
+
+* add custom font ([c5d8a13](https://github.com/bozzelliandrea/cafeteria-website/commit/c5d8a13b620a469a72ee0ef15fb0893bfa124aea))
+* menu images ([b3da786](https://github.com/bozzelliandrea/cafeteria-website/commit/b3da786accd9981ded477c210594477e2e04ea8f))
+
+
+### Miscellaneous Chores
+
+* add custom logo ([fee315b](https://github.com/bozzelliandrea/cafeteria-website/commit/fee315bebb63af4ab32ae92fd2cefac7b865cbf6))
+* add navbar active animation on scroll ([d5909a0](https://github.com/bozzelliandrea/cafeteria-website/commit/d5909a00000ea1ae5ab22d390e11383b08d540eb))
+* review refactor to dynamic dom node build ([5dfcbde](https://github.com/bozzelliandrea/cafeteria-website/commit/5dfcbde97aa31a39835e15aad296a918ba29983f))
+
 ## [0.1.0-beta.3](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.1.0-beta.2...cafeteria-website-v0.1.0-beta.3) (2025-03-20)
 
 
