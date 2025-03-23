@@ -2,48 +2,42 @@
 
 ## [0.1.0-beta.4](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.1.0-beta.3...cafeteria-website-v0.1.0-beta.4) (2025-03-22)
 
-
 ### Features
 
-* add custom font ([c5d8a13](https://github.com/bozzelliandrea/cafeteria-website/commit/c5d8a13b620a469a72ee0ef15fb0893bfa124aea))
-* menu images ([b3da786](https://github.com/bozzelliandrea/cafeteria-website/commit/b3da786accd9981ded477c210594477e2e04ea8f))
-* responsive booking and contact ([8ed515c](https://github.com/bozzelliandrea/cafeteria-website/commit/8ed515c5b56ec873cf6e63d3e79208ba95325e10))
-* responsive logo and menu ([bfb29e8](https://github.com/bozzelliandrea/cafeteria-website/commit/bfb29e8b48779467b3c1cbc3722a7f04fe00f540))
-* responsive reviews ([4c3189b](https://github.com/bozzelliandrea/cafeteria-website/commit/4c3189b53f199d0a50aff7de6b0fea3f00873c84))
-
+- add custom font ([c5d8a13](https://github.com/bozzelliandrea/cafeteria-website/commit/c5d8a13b620a469a72ee0ef15fb0893bfa124aea))
+- menu images ([b3da786](https://github.com/bozzelliandrea/cafeteria-website/commit/b3da786accd9981ded477c210594477e2e04ea8f))
+- responsive booking and contact ([8ed515c](https://github.com/bozzelliandrea/cafeteria-website/commit/8ed515c5b56ec873cf6e63d3e79208ba95325e10))
+- responsive logo and menu ([bfb29e8](https://github.com/bozzelliandrea/cafeteria-website/commit/bfb29e8b48779467b3c1cbc3722a7f04fe00f540))
+- responsive reviews ([4c3189b](https://github.com/bozzelliandrea/cafeteria-website/commit/4c3189b53f199d0a50aff7de6b0fea3f00873c84))
 
 ### Bug Fixes
 
-* responsive menu padding ([5958353](https://github.com/bozzelliandrea/cafeteria-website/commit/5958353b733da2a9561d4e3546874855905f4bc1))
-
+- responsive menu padding ([5958353](https://github.com/bozzelliandrea/cafeteria-website/commit/5958353b733da2a9561d4e3546874855905f4bc1))
 
 ### Miscellaneous Chores
 
-* add custom logo ([fee315b](https://github.com/bozzelliandrea/cafeteria-website/commit/fee315bebb63af4ab32ae92fd2cefac7b865cbf6))
-* add navbar active animation on scroll ([d5909a0](https://github.com/bozzelliandrea/cafeteria-website/commit/d5909a00000ea1ae5ab22d390e11383b08d540eb))
-* review refactor to dynamic dom node build ([5dfcbde](https://github.com/bozzelliandrea/cafeteria-website/commit/5dfcbde97aa31a39835e15aad296a918ba29983f))
+- add custom logo ([fee315b](https://github.com/bozzelliandrea/cafeteria-website/commit/fee315bebb63af4ab32ae92fd2cefac7b865cbf6))
+- add navbar active animation on scroll ([d5909a0](https://github.com/bozzelliandrea/cafeteria-website/commit/d5909a00000ea1ae5ab22d390e11383b08d540eb))
+- review refactor to dynamic dom node build ([5dfcbde](https://github.com/bozzelliandrea/cafeteria-website/commit/5dfcbde97aa31a39835e15aad296a918ba29983f))
 
 ## [0.1.0-beta.3](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.1.0-beta.2...cafeteria-website-v0.1.0-beta.3) (2025-03-20)
 
-
 ### Features
 
-* navigation bar component ([1214a8e](https://github.com/bozzelliandrea/cafeteria-website/commit/1214a8ebe8f03a323d84da4de43683833c5c2a9d))
-* review component style ([577ba78](https://github.com/bozzelliandrea/cafeteria-website/commit/577ba78a3921092e0325d72a2960194140c540e4))
+- navigation bar component ([1214a8e](https://github.com/bozzelliandrea/cafeteria-website/commit/1214a8ebe8f03a323d84da4de43683833c5c2a9d))
+- review component style ([577ba78](https://github.com/bozzelliandrea/cafeteria-website/commit/577ba78a3921092e0325d72a2960194140c540e4))
 
 ## [0.1.0-beta.2](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.1.0-beta.1...cafeteria-website-v0.1.0-beta.2) (2025-03-17)
 
-
 ### Features
 
-* contact sections ([4790569](https://github.com/bozzelliandrea/cafeteria-website/commit/47905692456a08a987cbd5d22f9054fbd8bfaf77))
-* menu component with items ([06323de](https://github.com/bozzelliandrea/cafeteria-website/commit/06323de577fdd58392c54ba863a2d7c5258b88f2))
-* migrate from rspack to vite bundler ([183412c](https://github.com/bozzelliandrea/cafeteria-website/commit/183412c18b186af177101c6d23099eef368b20c8))
-
+- contact sections ([4790569](https://github.com/bozzelliandrea/cafeteria-website/commit/47905692456a08a987cbd5d22f9054fbd8bfaf77))
+- menu component with items ([06323de](https://github.com/bozzelliandrea/cafeteria-website/commit/06323de577fdd58392c54ba863a2d7c5258b88f2))
+- migrate from rspack to vite bundler ([183412c](https://github.com/bozzelliandrea/cafeteria-website/commit/183412c18b186af177101c6d23099eef368b20c8))
 
 ### Bug Fixes
 
-* vite prod base url ([f92f449](https://github.com/bozzelliandrea/cafeteria-website/commit/f92f449be7138f9405ec6232b66bb501bfdc6ae2))
+- vite prod base url ([f92f449](https://github.com/bozzelliandrea/cafeteria-website/commit/f92f449be7138f9405ec6232b66bb501bfdc6ae2))
 
 ## [0.1.0-beta.1](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.0.1-beta.1...cafeteria-website-v0.1.0-beta.1) (2025-03-16)
 
