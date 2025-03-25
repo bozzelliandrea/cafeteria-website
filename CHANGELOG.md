@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.0-beta.5](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.1.0-beta.4...cafeteria-website-v0.1.0-beta.5) (2025-03-25)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump the all-dependencies group with 4 updates ([935fc4c](https://github.com/bozzelliandrea/cafeteria-website/commit/935fc4c3c5e198c493a9ae63fef74420d5091e58))
+* **deps-dev:** bump the all-dependencies group with 4 updates ([095fcf0](https://github.com/bozzelliandrea/cafeteria-website/commit/095fcf08a781fcd1cfc8410349652693716c70e9))
+* **deps-dev:** bump the dev dependencies ([935fc4c](https://github.com/bozzelliandrea/cafeteria-website/commit/935fc4c3c5e198c493a9ae63fef74420d5091e58))
+
 ## [0.1.0-beta.4](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.1.0-beta.3...cafeteria-website-v0.1.0-beta.4) (2025-03-22)
 
 ### Features
