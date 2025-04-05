@@ -1,19 +1,39 @@
-<h1 id="contact">Contact</h1>
-<section class="container" id="contact-section">
-  <div class="left">
-    <iframe
-      id="map-container"
+<h1 id="contact" tabindex="-1">Contact</h1>
+
+<section class="container" id="contact-section" role="region" aria-labelledby="contact"
+  aria-describedby="contact-description">
+  <p id="contact-description" class="sr-only">
+    Contact information, location on map, and ways to reach us.
+  </p>
+
+  <div class="left" role="complementary" aria-label="Location on Map">
+    <iframe id="map-container"
       src="https://maps.google.com/maps?q=40.75271454307901,-73.99865164068719&z=16&output=embed"
-    ></iframe>
+      title="Google Map showing company location at 123 Main St, Cityville" width="100%" height="300" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade" aria-describedby="map-caption"></iframe>
+    <p id="map-caption" class="sr-only">
+      Map showing the company's address at 123 Main St, Cityville, Country.
+    </p>
   </div>
+
   <div class="right">
-    <h2>About Us</h2>
+    <h2 id="about-heading">About Us</h2>
     <p>
       We are a company dedicated to providing top-notch services to our clients.
       Our mission is to deliver excellence and customer satisfaction.
     </p>
-    <h3>Contact Information</h3>
-    <p><strong>Phone:</strong> (123) 456-7890</p>
-    <p><strong>Address:</strong> 123 Main St, Cityville, Country</p>
+
+    <h3 id="contact-info-heading">Contact Information</h3>
+    <address aria-labelledby="contact-info-heading">
+      <p>
+        <strong>Phone:</strong>
+        <a href="tel:+11234567890" aria-label="Call us at (123) 456-7890">
+          (123) 456-7890
+        </a>
+      </p>
+      <p>
+        <strong>Address:</strong> 123 Main St, Cityville, Country
+      </p>
+    </address>
   </div>
 </section>

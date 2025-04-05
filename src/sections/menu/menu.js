@@ -42,7 +42,11 @@ function focusSectionByIndex(index) {
 
 function focusMenuItem(sectionId, itemIndex) {
   const items = getMenuItems(sectionId);
+
+  items.forEach((item) => item.removeAttribute('aria-current'));
+
   if (items[itemIndex]) {
+    items[itemIndex].setAttribute('aria-current', 'true');
     items[itemIndex].focus();
   }
 }
@@ -94,6 +98,8 @@ document.addEventListener('keydown', (e) => {
       // Exit to parent section
       e.preventDefault();
       const section = document.getElementById(currentSectionId);
+      items.forEach((item) => item.removeAttribute('aria-current'));
+
       section?.focus();
     }
   }
@@ -137,9 +143,10 @@ function createMenuItem({ name, description, price, image }) {
   const headerDiv = document.createElement('div');
   headerDiv.classList.add('menu-item_content-header');
 
-  const h3 = document.createElement('h3');
-  h3.textContent = name;
-  h3.id = `${safeNameId}-heading`;
+  const itemTitle = document.createElement('p');
+  itemTitle.className = 'menu-item_title';
+  itemTitle.textContent = name;
+  itemTitle.id = `${safeNameId}-heading`;
 
   const priceSpan = document.createElement('span');
   priceSpan.classList.add('price');
@@ -147,7 +154,7 @@ function createMenuItem({ name, description, price, image }) {
   priceSpan.id = `${safeNameId}-price`;
   priceSpan.setAttribute('aria-label', `Price: $${price}`);
 
-  headerDiv.appendChild(h3);
+  headerDiv.appendChild(itemTitle);
   headerDiv.appendChild(priceSpan);
 
   // Description
