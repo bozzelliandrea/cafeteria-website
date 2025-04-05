@@ -39,15 +39,21 @@ function createReviewNode(review) {
   const reviewDiv = document.createElement('div');
   reviewDiv.classList.add('review', ...(review.style ?? []));
 
+  // Accessibility attributes
+  reviewDiv.setAttribute('role', 'listitem');
+  reviewDiv.setAttribute('tabindex', '0');
+
   // Create the review text paragraph
   const reviewText = document.createElement('p');
   reviewText.classList.add('review-text');
   reviewText.textContent = review.review;
+  reviewText.setAttribute('aria-label', `Review Text ${review.review}`);
 
   // Create the review user paragraph
   const reviewUser = document.createElement('p');
   reviewUser.classList.add('review-user');
   reviewUser.textContent = `~ ${review.name} ~`;
+  reviewUser.setAttribute('aria-label', `Review by ${review.name}`);
 
   // Append the text and user paragraphs to the review div
   reviewDiv.appendChild(reviewText);

@@ -34,7 +34,7 @@
   .review {
     background: #c49b63;
     padding: 20px;
-    color: white;
+    color: black;
     text-align: center;
 
     height: 100%;
@@ -65,6 +65,10 @@
     z-index: 1;
     width: 90%;
     height: 90%;
+
+    p {
+      color: black;
+    }
   }
   .overlay::after {
     position: absolute;
