@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.1.0-beta.5](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.1.0-beta.4...cafeteria-website-v0.1.0-beta.5) (2025-04-05)
+
+
+### Features
+
+* **a11y:** app arrow navigation ([5c7d5f7](https://github.com/bozzelliandrea/cafeteria-website/commit/5c7d5f7e7f5fe0490bad489feed18be7885e93d3))
+* **a11y:** contact page and booking ([3cd668d](https://github.com/bozzelliandrea/cafeteria-website/commit/3cd668de57a3d929ec42d94417629c885d60a7dc))
+* **a11y:** menu accessibility and arrow navigation ([3136db8](https://github.com/bozzelliandrea/cafeteria-website/commit/3136db890afdb840e63ad4e5e941bd0e0a60c88d))
+* **a11y:** reviews ([5637676](https://github.com/bozzelliandrea/cafeteria-website/commit/56376763822f90453c5595269e0e433374c8de8a))
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump the all-dependencies group with 4 updates ([935fc4c](https://github.com/bozzelliandrea/cafeteria-website/commit/935fc4c3c5e198c493a9ae63fef74420d5091e58))
+* **deps-dev:** bump the all-dependencies group with 4 updates ([095fcf0](https://github.com/bozzelliandrea/cafeteria-website/commit/095fcf08a781fcd1cfc8410349652693716c70e9))
+* **deps-dev:** bump the dev dependencies ([935fc4c](https://github.com/bozzelliandrea/cafeteria-website/commit/935fc4c3c5e198c493a9ae63fef74420d5091e58))
+* **deps-dev:** bump vite from 6.2.3 to 6.2.4 in the all-dependencies group ([59d0f4d](https://github.com/bozzelliandrea/cafeteria-website/commit/59d0f4d86bc412589f09dd5e5657a8dc18269f79))
+* **deps-dev:** bump vite from 6.2.3 to 6.2.4 in the all-dependencies group ([59d0f4d](https://github.com/bozzelliandrea/cafeteria-website/commit/59d0f4d86bc412589f09dd5e5657a8dc18269f79))
+* **deps-dev:** bump vite in the all-dependencies group ([37c88bc](https://github.com/bozzelliandrea/cafeteria-website/commit/37c88bc4a785c698cceca2e08f8d69c99a00888f))
+
 ## [0.1.0-beta.4](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v0.1.0-beta.3...cafeteria-website-v0.1.0-beta.4) (2025-03-22)
 
 ### Features
