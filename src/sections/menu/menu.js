@@ -14,56 +14,160 @@ import drink6 from '../../../assets/food/drink-6.jpg.webp';
 import drink7 from '../../../assets/food/drink-7.jpg.webp';
 import drink8 from '../../../assets/food/drink-8.jpg.webp';
 
+const sectionIds = [
+  'starter-container',
+  'main-menu-container',
+  'dessert-container',
+  'drinks-container',
+];
+
+function getCurrentSectionIndex() {
+  return sectionIds.findIndex((id) => document.activeElement.id === id);
+}
+
+function getMenuItems(sectionId) {
+  const section = document.getElementById(sectionId);
+  return section
+    ? Array.from(section.querySelectorAll('.menu-item_container'))
+    : [];
+}
+
+function focusSectionByIndex(index) {
+  const section = document.getElementById(sectionIds[index]);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    section.focus({ preventScroll: true });
+  }
+}
+
+function focusMenuItem(sectionId, itemIndex) {
+  const items = getMenuItems(sectionId);
+  if (items[itemIndex]) {
+    items[itemIndex].focus();
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  const currentSectionIndex = getCurrentSectionIndex();
+
+  // Inside section container
+  if (
+    currentSectionIndex >= 0 &&
+    document.activeElement.id === sectionIds[currentSectionIndex]
+  ) {
+    const sectionId = sectionIds[currentSectionIndex];
+
+    if (e.key === 'ArrowRight') {
+      // Enter into first item in section
+      e.preventDefault();
+      focusMenuItem(sectionId, 0);
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      focusSectionByIndex(
+        Math.min(sectionIds.length - 1, currentSectionIndex + 1),
+      );
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      focusSectionByIndex(Math.max(0, currentSectionIndex - 1));
+    }
+
+    // Inside a menu item
+  } else if (document.activeElement.classList.contains('menu-item_container')) {
+    const currentSectionId = sectionIds.find((id) =>
+      document.getElementById(id)?.contains(document.activeElement),
+    );
+
+    const items = getMenuItems(currentSectionId);
+    const itemIndex = items.indexOf(document.activeElement);
+
+    if (e.key === 'ArrowDown' && itemIndex < items.length - 1) {
+      e.preventDefault();
+      focusMenuItem(currentSectionId, itemIndex + 1);
+    }
+
+    if (e.key === 'ArrowUp' && itemIndex > 0) {
+      e.preventDefault();
+      focusMenuItem(currentSectionId, itemIndex - 1);
+    }
+
+    if (e.key === 'ArrowLeft') {
+      // Exit to parent section
+      e.preventDefault();
+      const section = document.getElementById(currentSectionId);
+      section?.focus();
+    }
+  }
+});
+
 function createMenuItem({ name, description, price, image }) {
-  // Create the outer div
-  const pricingEntry = document.createElement('div');
-  pricingEntry.classList.add('menu-item_container');
-  // Create the image div
-  const imgDiv = document.createElement('img');
-  imgDiv.classList.add('menu-item_icon');
-  imgDiv.src = image;
+  // Create the outer container
+  const menuItemEntry = document.createElement('div');
+  menuItemEntry.classList.add('menu-item_container');
+
+  // Accessibility attributes
+  menuItemEntry.setAttribute('lang', 'en');
+  menuItemEntry.setAttribute('role', 'listitem');
+  menuItemEntry.setAttribute('tabindex', '0');
+
+  const safeNameId = `menu-item-${name.toLowerCase().replace(/\s+/g, '-')}`;
+  menuItemEntry.setAttribute('aria-labelledby', `${safeNameId}-heading`);
+  menuItemEntry.setAttribute(
+    'aria-describedby',
+    `${safeNameId}-description ${safeNameId}-price`,
+  );
+
+  // Create the image element
+  const img = document.createElement('img');
+  img.classList.add('menu-item_icon');
+  img.src = image;
+
+  // Accessible alt text (assume descriptive or allow override via param if needed)
+  img.alt = `${name} dish`;
+  img.setAttribute('role', 'img'); // Helps screen readers know it's meaningful
 
   const imgContainerDiv = document.createElement('div');
   imgContainerDiv.classList.add('menu-item_icon-container');
-  imgContainerDiv.appendChild(imgDiv);
+  imgContainerDiv.appendChild(img);
 
-  // Create the desc div
-  const contentHeaderDiv = document.createElement('div');
-  contentHeaderDiv.classList.add('menu-item_content');
+  // Create content container
+  const contentContainer = document.createElement('div');
+  contentContainer.classList.add('menu-item_content');
 
-  // Create the inner content div
-  const innerContentDiv = document.createElement('div');
-  innerContentDiv.classList.add('menu-item_content-header');
+  // Header (name and price)
+  const headerDiv = document.createElement('div');
+  headerDiv.classList.add('menu-item_content-header');
 
-  // Create the h3 and span elements for name
   const h3 = document.createElement('h3');
   h3.textContent = name;
+  h3.id = `${safeNameId}-heading`;
 
-  // Create the price span
   const priceSpan = document.createElement('span');
   priceSpan.classList.add('price');
   priceSpan.textContent = `$${price}`;
+  priceSpan.id = `${safeNameId}-price`;
+  priceSpan.setAttribute('aria-label', `Price: $${price}`);
 
-  // Append h3 and priceSpan to innerContentDiv
-  innerContentDiv.appendChild(h3);
-  innerContentDiv.appendChild(priceSpan);
+  headerDiv.appendChild(h3);
+  headerDiv.appendChild(priceSpan);
 
-  // Create the description div
+  // Description
   const descriptionDiv = document.createElement('div');
   descriptionDiv.classList.add('menu-item_content-description');
+
   const descriptionPara = document.createElement('p');
   descriptionPara.textContent = description;
+  descriptionPara.id = `${safeNameId}-description`;
+  descriptionPara.setAttribute('aria-label', `Description: ${description}`);
+
   descriptionDiv.appendChild(descriptionPara);
 
-  // Append innerContentDiv and descriptionDiv to descDiv
-  contentHeaderDiv.appendChild(innerContentDiv);
-  contentHeaderDiv.appendChild(descriptionDiv);
+  // Assemble all parts
+  contentContainer.appendChild(headerDiv);
+  contentContainer.appendChild(descriptionDiv);
+  menuItemEntry.appendChild(imgContainerDiv);
+  menuItemEntry.appendChild(contentContainer);
 
-  // Append imgDiv and descDiv to pricingEntry
-  pricingEntry.appendChild(imgContainerDiv);
-  pricingEntry.appendChild(contentHeaderDiv);
-
-  return pricingEntry;
+  return menuItemEntry;
 }
 
 const STARTER_LIST = [
@@ -71,7 +175,7 @@ const STARTER_LIST = [
     name: 'Bruschetta',
     description: 'Toasted bread with tomatoes and basil.',
     price: '6.50',
-    image: dish3, // You can randomly assign image imports like dish3, dessert1, etc.
+    image: dish3,
   },
   {
     name: 'Stuffed Mushrooms',

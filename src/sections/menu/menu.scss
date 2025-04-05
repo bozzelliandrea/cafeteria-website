@@ -136,3 +136,15 @@
     }
   }
 }
+
+.rectangle:focus {
+  outline: 3px solid #ff8c00;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.menu-item_container:focus {
+  outline: 3px solid #1e90ff;
+  outline-offset: 2px;
+  border-radius: 8px;
+}

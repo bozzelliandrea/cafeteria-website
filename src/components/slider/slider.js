@@ -22,22 +22,22 @@ document.addEventListener('WebAppInvoker_ContentLoading', () => {
 });
 
 const template = `
-    <div class="carousel" id="slider">
-        <div class="carousel-images">
-            <img src="${cafeteria1}" draggable="false" alt="cafeteria background image 1">
-            <img src="${cafeteria2}" draggable="false" alt="cafeteria background image 2">
-            <img src="${cafeteria3}" draggable="false" alt="cafeteria background image 3">
-            <img src="${cafeteria4}" draggable="false" alt="cafeteria background image 4">
+    <div class="carousel" id="slider" role="region" aria-label="Cafeteria photo carousel">
+        <div class="carousel-images" aria-live="polite">
+            <img src="${cafeteria1}" draggable="false" alt="cafeteria background image 1" role="img">
+            <img src="${cafeteria2}" draggable="false" alt="cafeteria background image 2" role="img">
+            <img src="${cafeteria3}" draggable="false" alt="cafeteria background image 3" role="img">
+            <img src="${cafeteria4}" draggable="false" alt="cafeteria background image 4" role="img">
         </div>
         <div class="overlay">
           <div class="overlay-content">
-            <img id="logo-mobile" src="${logo}" draggable="false" alt="cafeteria logo">
+            <img id="logo-mobile" src="${logo}" draggable="false" alt="cafeteria logo" role="img">
 
             <h1>kauai coffee</h1>
             <p>One of the Best coffee taste and Experience in Town</p>
             <div class="button-container">
-                <a id="slider-view-menu-button" class="btn">View Menu</a>
-                <a id="slider-book-table-button" class="btn">Book a Table</a>
+                <button id="slider-view-menu-button" class="btn">View Menu</button>
+                <button id="slider-book-table-button" class="btn">Book a Table</button>
             </div>
           </div>
         </div>
