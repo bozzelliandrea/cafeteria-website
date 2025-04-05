@@ -1,4 +1,5 @@
 import './index.scss';
+import './arrow-navigation.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // render slider first

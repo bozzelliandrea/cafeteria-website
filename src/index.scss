@@ -21,3 +21,16 @@ body {
   background: #000000;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
 }
+
+.section-focus {
+  outline: 3px solid orange;
+  outline-offset: -3px;
+  scroll-margin-top: 20px;
+}
+
+section [tabindex]:focus {
+  outline: none;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  transition: border-color 0.2s ease;
+}

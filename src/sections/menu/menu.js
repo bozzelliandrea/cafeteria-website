@@ -14,97 +14,6 @@ import drink6 from '../../../assets/food/drink-6.jpg.webp';
 import drink7 from '../../../assets/food/drink-7.jpg.webp';
 import drink8 from '../../../assets/food/drink-8.jpg.webp';
 
-const sectionIds = [
-  'starter-container',
-  'main-menu-container',
-  'dessert-container',
-  'drinks-container',
-];
-
-function getCurrentSectionIndex() {
-  return sectionIds.findIndex((id) => document.activeElement.id === id);
-}
-
-function getMenuItems(sectionId) {
-  const section = document.getElementById(sectionId);
-  return section
-    ? Array.from(section.querySelectorAll('.menu-item_container'))
-    : [];
-}
-
-function focusSectionByIndex(index) {
-  const section = document.getElementById(sectionIds[index]);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    section.focus({ preventScroll: true });
-  }
-}
-
-function focusMenuItem(sectionId, itemIndex) {
-  const items = getMenuItems(sectionId);
-
-  items.forEach((item) => item.removeAttribute('aria-current'));
-
-  if (items[itemIndex]) {
-    items[itemIndex].setAttribute('aria-current', 'true');
-    items[itemIndex].focus();
-  }
-}
-
-document.addEventListener('keydown', (e) => {
-  const currentSectionIndex = getCurrentSectionIndex();
-
-  // Inside section container
-  if (
-    currentSectionIndex >= 0 &&
-    document.activeElement.id === sectionIds[currentSectionIndex]
-  ) {
-    const sectionId = sectionIds[currentSectionIndex];
-
-    if (e.key === 'ArrowRight') {
-      // Enter into first item in section
-      e.preventDefault();
-      focusMenuItem(sectionId, 0);
-    } else if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      focusSectionByIndex(
-        Math.min(sectionIds.length - 1, currentSectionIndex + 1),
-      );
-    } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      focusSectionByIndex(Math.max(0, currentSectionIndex - 1));
-    }
-
-    // Inside a menu item
-  } else if (document.activeElement.classList.contains('menu-item_container')) {
-    const currentSectionId = sectionIds.find((id) =>
-      document.getElementById(id)?.contains(document.activeElement),
-    );
-
-    const items = getMenuItems(currentSectionId);
-    const itemIndex = items.indexOf(document.activeElement);
-
-    if (e.key === 'ArrowDown' && itemIndex < items.length - 1) {
-      e.preventDefault();
-      focusMenuItem(currentSectionId, itemIndex + 1);
-    }
-
-    if (e.key === 'ArrowUp' && itemIndex > 0) {
-      e.preventDefault();
-      focusMenuItem(currentSectionId, itemIndex - 1);
-    }
-
-    if (e.key === 'ArrowLeft') {
-      // Exit to parent section
-      e.preventDefault();
-      const section = document.getElementById(currentSectionId);
-      items.forEach((item) => item.removeAttribute('aria-current'));
-
-      section?.focus();
-    }
-  }
-});
-
 function createMenuItem({ name, description, price, image }) {
   // Create the outer container
   const menuItemEntry = document.createElement('div');
@@ -301,6 +210,7 @@ document.addEventListener('WebAppInvoker_ContentLoading', () => {
   buildMenuSectionContainer('main-menu-container', MAIN_LIST);
   buildMenuSectionContainer('dessert-container', DESSERT_LIST);
   buildMenuSectionContainer('drinks-container', DRINKS_LIST);
+  document.dispatchEvent(new Event('SectionRender_Menu_Complete'));
 });
 
 export default template;

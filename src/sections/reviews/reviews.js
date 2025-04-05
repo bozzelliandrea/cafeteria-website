@@ -68,6 +68,7 @@ document.addEventListener('WebAppInvoker_ContentLoading', () => {
     const reviewNode = createReviewNode(review);
     reviewContainer.appendChild(reviewNode);
   });
+  document.dispatchEvent(new Event('SectionRender_Reviews_Complete'));
 });
 
 export default template;
