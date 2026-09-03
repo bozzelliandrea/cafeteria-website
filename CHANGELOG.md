@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.4](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v1.1.3...cafeteria-website-v1.1.4) (2026-09-03)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump the all-dependencies group across 1 directory with 5 updates ([b086a9a](https://github.com/bozzelliandrea/cafeteria-website/commit/b086a9a146c4cb765d54a05161dbf50ace4b6a25))
+* **deps-dev:** bump the all-dependencies group across 1 directory with 5 updates ([4025b19](https://github.com/bozzelliandrea/cafeteria-website/commit/4025b19ed6c032117e93229424db843b9488732b))
+
 ## [1.1.3](https://github.com/bozzelliandrea/cafeteria-website/compare/cafeteria-website-v1.1.2...cafeteria-website-v1.1.3) (2025-11-01)
 
 
